@@ -1,0 +1,253 @@
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+
+    &__container {
+        display: flex;
+        min-height: 124px;
+        align-items: center;
+    }
+
+    &__logo {
+        position: relative;
+        z-index: 5;
+    }
+
+    &__menu {
+        flex: 1 1 auto;
+    }
+
+    &__buttons {
+        position: relative;
+        z-index: 5;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+}
+
+/* -------------------------- */
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    letter-spacing: $ls003em;
+    color: $TitleColor;
+
+    & span {
+        color: $PrimaryColor;
+    }
+}
+
+/* -------------------------- */
+
+.menu {
+    display:flex;
+    justify-content: flex-start;
+
+    &__body {
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__item {
+    }
+
+    &__link {
+        color: $TitleColor;
+        letter-spacing: $ls003em;
+        line-height: 1.4;
+        font-weight: 500;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__icon {
+        display: none;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .menu {
+        &__item {
+            margin-left: 40px;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .header__container {
+        min-height: 104px;
+    }
+
+    .menu {
+        &__item {
+            margin-left: 30px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .menu {
+        justify-content: flex-end;
+
+        &__item:not(:last-child) {
+            padding-bottom: 10px;
+        }
+
+        &__icon {
+            margin-left: 20px;
+            z-index: 5;
+            display: block;
+            position: relative;
+            width: 30px;
+            height: 18px;
+            cursor: pointer;
+            
+            & span,
+            &::before,
+            &::after {
+                left: 0;
+                position: absolute;
+                height: 10%;
+                width: 100%;
+                transition: all 0.3s ease 0s;
+                background-color: $TitleColor;
+            }
+
+            &::before,
+            &::after {
+                content: "";
+            }
+
+            &::before {
+                top: 0;
+            }
+
+            &::after {
+                bottom: 0;
+            }
+
+            & span {
+                top: 50%;
+                transform: scale(1) translate(0px, -50%);
+            }
+
+            &._active {
+
+                &::before {
+                    -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+                    transform: rotate(-45deg) translate(-5px, 6px);
+                }
+    
+                &::after {
+                    -webkit-transform: rotate(45deg) translate(-5px, -6px);
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+    
+                & span {
+                    transform: scale(0) translate(0px, -50%);
+                }
+            }
+        }
+
+        &__body {
+            position: fixed;
+            overflow: auto;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background-color: $BackgroundColor;
+            transition: left 0.3s ease 0s;
+            padding: 100px 15px 30px 15px;
+
+            &._active {
+                left: 0;
+            }
+        }
+
+        &__item {
+            margin: 0 0 10px 0;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__link {
+            font-size: 24px;
+        }
+
+        &__list {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
+
+/* -------------------------- */
+
+.button {
+    @include button;
+    font-weight: 500;
+
+    &__signin {
+        line-height: 1.4;
+        font-weight: 500;
+        color: $TitleColor;
+        letter-spacing: $ls003em;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-right: 20px;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__signup {
+        flex: 0 0 97px;
+        padding: 12px 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .button {
+        font-size: 16px;
+
+        &__signup {
+            padding: 12px 18px;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .header {
+        &__logo {
+            flex: 1 1 auto;
+        }
+    }
+
+    .button {
+        font-size: 16px;
+
+        &__signup {
+            flex: 0 0 67px;
+            overflow: hidden;
+            padding: 12px 3px;
+            white-space: nowrap;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+.main {
+    flex: 1 1 auto;
+}
+
+/* ----------------------------- */
+
+.medical-care {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    &__container {
+        padding: 184px 15px 211px 15px;
+        display: flex;
+        align-items: center;
+        position: relative;     
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        background-color: $PrimaryColor;
+        width: 1240px;
+        height: 1240px;
+        top: 43%;
+        left: 45%;
+        border-radius: 50%;
+    }
+
+    &__block-text {
+        max-width: 634px;
+    }
+
+    &__button {
+        flex: 0 1 162;
+        padding: 16px 36px;
+    }
+
+    &__profile {
+        position: absolute;
+        z-index: 6;
+        bottom: 13%;
+        right: 36%;
+    }
+
+    &__image {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        right: -90px;
+    }
+}
+
+@media (max-width: 1268px) {
+    .medical-care {
+
+        &::before {
+            top: 40%;
+            left: 38%;
+        }
+        &__profile {
+            right: 43%;
+        }
+    
+        &__block-text {
+            max-width: 520px;
+        }
+    }
+
+    .doctor-image_1 {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .medical-care {
+        &__profile {
+            bottom: 13%;
+            right: 45%;
+        }
+    
+        &__block-text {
+            max-width: 500px;
+        }
+
+        &__image {
+            right: -75px;
+        }
+    }
+
+    .doctor-image_1 {
+        max-width: 70%;
+    }
+}
+
+@media (max-width: 767.98px) {
+}
+
+/* ----------------------------- */
+
+.block-text {
+
+    &__title {
+        font-weight: 700;
+        font-size: 54px;
+        line-height: 1.3;
+        letter-spacing: $ls002em;
+        color: $TitleColor;
+
+        & span {
+            color: $PrimaryColor;
+        }
+
+        &:not(:last-child) {
+            margin: 0 0 26px 0;
+        }
+    }
+
+    &__text {
+        font-size: 14px;
+        line-height: 1.43;
+        letter-spacing: $ls003em;
+
+        &:not(:last-child) {
+            margin: 0 0 26px 0;
+        }
+    }
+}
+
+@media (max-width: 1268px) {
+    .block-text {
+
+        &__title {
+            font-size: 44px;
+    
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    
+        &__text {
+            font-size: 14px;
+    
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .block-text {
+
+        &__title {
+            font-size: 38px;
+    
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    
+        &__text {
+            font-size: 14px;
+    
+            &:not(:last-child) {
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+}
+
+/* ----------------------------- */
+
+.profile-card {
+    background-color: $BackgroundColor;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px -24px 34px rgba(199, 201, 217, 0.15);
+    
+    &__container {
+        padding: 16px 0;
+        width: 144px;
+    }
+
+    &__image {
+        img {
+            border-radius: 50%;
+        }
+        margin: 0 0 10px 0;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: $ls003em;
+
+        &:not(:last-child) {
+            margin: 0 0 4px 0;
+        }
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: $ls003em;
+
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__button {
+        padding: 10px;
+        flex: 0 1 112px;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: $ls003em;
+    }
+}
+
+/* ----------------------------- */
+
+.button {
+    @include button;
+}
+
+/* ----------------------------- */
+
+.doctor-image_1 {
+    img {
+        max-width: 100%;
+    }
+}
+
+

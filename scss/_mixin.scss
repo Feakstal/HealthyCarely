@@ -1,0 +1,14 @@
+@mixin button {
+    
+    display: inline-block;
+    background-color: $PrimaryColor;
+    border-radius: $BorderRadius;
+    line-height: 1.4;
+    letter-spacing: $ls003em;
+    color: $BackgroundColor;
+    transition: background-color 0.3s ease 0s;
+
+    &:hover {
+        background-color: #7996f7;
+    }
+}
