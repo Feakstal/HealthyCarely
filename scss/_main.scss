@@ -12,7 +12,6 @@
     &__container {
         padding: 184px 15px 211px 15px;
         display: flex;
-        align-items: center;
         position: relative;     
     }
 
@@ -30,11 +29,6 @@
 
     &__block-text {
         max-width: 634px;
-    }
-
-    &__button {
-        flex: 0 1 162;
-        padding: 16px 36px;
     }
 
     &__profile {
@@ -88,13 +82,50 @@
             right: -75px;
         }
     }
-
-    .doctor-image_1 {
-        max-width: 70%;
-    }
 }
 
 @media (max-width: 767.98px) {
+    .medical-care {
+        
+        &::before {
+            display: none;
+        }
+
+        &__container {
+            flex-direction: column;
+            padding: 124px 15px 0px 15px;
+        }
+
+        &__block-text {
+            max-width: none;    
+        }
+
+        &__button {
+            flex: 0 0 122px;
+            padding: 16px 36px;
+        }
+
+        &__profile {
+            position: absolute;
+            width: 144px;
+            left: 100px;
+            bottom: 60px;
+        }   
+    }
+}
+
+@media (max-width: 479.98px) {
+    .medical-care {
+
+        &__container {
+            padding: 124px 15px 50px 15px;
+        }
+
+        &__profile {
+            position: static;
+            margin: 40px auto 0px;
+        }  
+    }
 }
 
 /* ----------------------------- */
@@ -170,6 +201,15 @@
     }
 }
 
+@media (max-width: 767.98px) {
+    .block-text {
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+} 
+
 /* ----------------------------- */
 
 .profile-card {
@@ -224,6 +264,20 @@
 
 .button {
     @include button;
+
+    &__contact-us {
+        flex: 0 0 162px;
+        padding: 16px 36px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .button {
+        &__contact-us {
+            flex: 0 0 102px;
+            padding: 12px 22px;
+        }
+    }
 }
 
 /* ----------------------------- */
@@ -233,5 +287,123 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 767.98px) {
+    .doctor-image_1 {
+        position: relative;
+        right: -180px;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 479.98px) {
+    .doctor-image_1 {
+        display: none;
+    }
+}
+
+/* ----------------------------- */
+
+.fast-solutions {
+
+    &__container {
+        padding: 100px 15px 100px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block-text {
+        margin: 0px auto 53px;
+        text-align: center;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: $ls003em;
+        color: $PrimaryColor;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: $ls0015em;
+        color: $TitleColor;
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        
+    }
+
+    &__column {
+        display: flex;
+        background: $BackgroundColor;
+        box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
+        border-radius: 0px 0px 10px 10px;
+        border-top: $PrimaryColor solid 3px;
+        flex: 0 1 25%;
+        &_1 {
+
+        }
+
+        &_2 {
+        }
+
+        &_3 {
+        }
+
+        &_4 {
+        }
+    }
+
+    &__item {
+        
+    }
+}
+
+.block-text {
+    &__subtitle {
+
+    }
+}
+
+.item-fast-solutions {
+
+    &__icon {
+        padding: 50px 0 0 40px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: $ls003em;
+        color: $TitleColor;
+        padding: 14px 0 12px 40px;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: $ls003em;
+        color: $TextColor;
+        padding: 0 0 50px 40px;
+        max-width: 250px;
+
+        &:nth-child(3),
+        &:nth-child(4) { 
+            padding: 0 0 34px 40px;
+        }
+    }
+}
+
+
+
+
 
 

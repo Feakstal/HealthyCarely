@@ -69,10 +69,6 @@
             text-decoration: underline;
         }
     }
-
-    &__icon {
-        display: none;
-    }
 }
 
 @media (min-width: 991.98px) {
@@ -223,10 +219,7 @@
 
 @media (max-width: 767.98px) {
     .button {
-        font-size: 16px;
-
         &__signup {
-            padding: 12px 18px;
             overflow: hidden;
             white-space: nowrap;
         }
@@ -241,12 +234,11 @@
     }
 
     .button {
-        font-size: 16px;
 
         &__signup {
             flex: 0 0 67px;
             overflow: hidden;
-            padding: 12px 3px;
+            padding: 12px 6px;
             white-space: nowrap;
         }
     }
