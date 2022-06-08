@@ -27,7 +27,7 @@
         border-radius: 50%;
     }
 
-    &__block-text {
+    &__about {
         max-width: 634px;
     }
 
@@ -57,7 +57,7 @@
             right: 43%;
         }
     
-        &__block-text {
+        &__about {
             max-width: 520px;
         }
     }
@@ -74,7 +74,7 @@
             right: 45%;
         }
     
-        &__block-text {
+        &__about {
             max-width: 500px;
         }
 
@@ -86,17 +86,13 @@
 
 @media (max-width: 767.98px) {
     .medical-care {
-        
-        &::before {
-            display: none;
-        }
 
         &__container {
             flex-direction: column;
             padding: 124px 15px 0px 15px;
         }
 
-        &__block-text {
+        &__about {
             max-width: none;    
         }
 
@@ -117,20 +113,24 @@
 @media (max-width: 479.98px) {
     .medical-care {
 
+        &::before {
+            display: none;
+        }
+        
         &__container {
-            padding: 124px 15px 50px 15px;
+            padding: 124px 15px 40px 15px;
         }
 
         &__profile {
             position: static;
-            margin: 40px auto 0px;
+            margin: 70px auto 0px;
         }  
     }
 }
 
 /* ----------------------------- */
 
-.block-text {
+.about {
 
     &__title {
         font-weight: 700;
@@ -160,7 +160,7 @@
 }
 
 @media (max-width: 1268px) {
-    .block-text {
+    .about {
 
         &__title {
             font-size: 44px;
@@ -181,8 +181,7 @@
 }
 
 @media (max-width: 991.98px) {
-    .block-text {
-
+    .about {
         &__title {
             font-size: 38px;
     
@@ -202,8 +201,7 @@
 }
 
 @media (max-width: 767.98px) {
-    .block-text {
-
+    .about {
         &__title {
             font-size: 36px;
         }
@@ -212,10 +210,37 @@
 
 /* ----------------------------- */
 
-.profile-card {
+.card {
     background-color: $BackgroundColor;
-    text-align: center;
     border-radius: 10px;
+    
+    &__block-text {
+    }
+
+    &__image {
+        img {
+            border-radius: 50%;
+        }
+    }
+
+    &__title {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: $ls003em;
+        color: $TitleColor;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: $ls003em;
+        color: $TextColor;
+    }
+}
+
+.profile-card {
+    text-align: center;
     box-shadow: 0px -24px 34px rgba(199, 201, 217, 0.15);
     
     &__container {
@@ -223,31 +248,26 @@
         width: 144px;
     }
 
+    &__item{
+
+    }
+
+    &__block-text {
+
+    }
+
     &__image {
-        img {
-            border-radius: 50%;
-        }
         margin: 0 0 10px 0;
     }
 
     &__title {
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: $ls003em;
-
         &:not(:last-child) {
             margin: 0 0 4px 0;
         }
     }
 
     &__text {
-        font-size: 12px;
-        line-height: 16px;
-        letter-spacing: $ls003em;
-
-        &:not(:last-child) {
-            margin: 0 0 10px 0;
-        }
+        margin: 0 0 10px 0;
     }
 
     &__button {
@@ -257,6 +277,12 @@
         font-size: 12px;
         line-height: 16px;
         letter-spacing: $ls003em;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .profile-card {
+        box-shadow: 0px 14px 34px rgba(199, 201, 217, 0.15);
     }
 }
 
@@ -305,7 +331,6 @@
 /* ----------------------------- */
 
 .fast-solutions {
-
     &__container {
         padding: 100px 15px 100px 15px;
         display: flex;
@@ -315,22 +340,6 @@
     &__block-text {
         margin: 0px auto 53px;
         text-align: center;
-    }
-
-    &__title {
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 20px;
-        letter-spacing: $ls003em;
-        color: $PrimaryColor;
-    }
-
-    &__subtitle {
-        font-weight: 700;
-        font-size: 32px;
-        line-height: 40px;
-        letter-spacing: $ls0015em;
-        color: $TitleColor;
     }
 
     &__items {
@@ -346,19 +355,7 @@
         box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
         border-radius: 0px 0px 10px 10px;
         border-top: $PrimaryColor solid 3px;
-        flex: 0 1 25%;
-        &_1 {
-
-        }
-
-        &_2 {
-        }
-
-        &_3 {
-        }
-
-        &_4 {
-        }
+        flex: 0 0 287px;
     }
 
     &__item {
@@ -366,14 +363,67 @@
     }
 }
 
-.block-text {
-    &__subtitle {
+@media (max-width: 1268px) {
+    .fast-solutions {
+        &__items {
+            gap: 15px;
+        }
 
+        &__column {
+            flex: 0 0 226px;
+        }
     }
 }
 
-.item-fast-solutions {
+@media (max-width: 991.98px) {
+    .fast-solutions {
+        &__container {
+            padding: 70px 15px 70px 15px;
+        }
 
+        &__items {
+            flex-direction: column;
+            text-align: center;
+        }
+        &__column {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .fast-solutions {
+        &__container {
+            padding: 30px 15px 50px 15px;
+        }
+    }
+}
+
+/* ----------------------------- */
+
+.block-text {
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: $ls003em;
+        color: $PrimaryColor;
+        margin: 0 0 10px 0;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: $ls0015em;
+        color: $TitleColor;
+    }
+}
+
+/* ----------------------------- */
+
+.item-fast-solutions {
     &__icon {
         padding: 50px 0 0 40px;
     }
@@ -402,8 +452,216 @@
     }
 }
 
+@media (max-width: 1268px) {
+    .item-fast-solutions {
+        &__icon {
+            padding: 30px 0 0 20px;
+        }
+    
+        &__title {
+            padding: 10px 0 8px 20px;
+        }
 
+        &__text {
+            padding: 0 0 20px 20px;
+            max-width: 200px;
 
+            &:nth-child(3),
+            &:nth-child(4) { 
+                padding: 0 0 20px 20px;
+            }
+        }
+    }
+}
 
+@media (max-width: 991.98px) {
+    .item-fast-solutions {
+        &__icon {
+            padding: 0 0 20px 0;
+        }
+    
+        &__title {
+            padding: 0 0 8px 0;
+        }
 
+        &__text {
+            padding: 0;
+            max-width: none;
 
+            &:nth-child(3),
+            &:nth-child(4) { 
+                padding: 0;
+            }
+        }
+    }
+}
+
+/* ----------------------------- */
+
+.find-doctor {
+    position: relative;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    &__container {
+        position: relative;
+        display: flex;
+        padding: 80px 15px 208px 15px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 3;
+        background-color: $PrimaryColor;
+        width: 803px;
+        height: 803px;
+        top: 32%;
+        left: 53%;
+        border-radius: 50%;
+    }
+
+    &__block {
+        
+    }
+
+    &__block-text {
+        margin: 0 0 26px 0;
+    }
+
+    &__available-card {
+        position: absolute;
+        z-index: 6;
+        top: 15%;
+        right: 30%;
+    }
+
+    &__image {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        right: 240px;
+    }
+}
+
+.block {
+    max-width: 535px;
+
+    &__text {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: $ls002em;
+        color: $TextColor;
+        margin: 0 0 26px 0;
+    }
+
+    &__list {
+        margin: 0 0 26px 36px;
+
+        & li {
+            &:not(:last-child) {
+                margin: 0 0 16px 0;
+            }
+        }
+    }
+}
+
+.list {
+    &__item {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: $ls002em;
+        color: $TitleColor;
+        position: relative;
+
+        &::before {
+            content: '';
+            background: url('/img/li-icon.svg') 
+                no-repeat center center/cover;
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            top: -2px;
+            left: -36px;
+        }
+    }
+}
+
+.button {
+    &__see-the-doctors {
+        padding: 16px 36px;
+    }
+}
+
+.available-card {
+    box-shadow: -4px -10px 50px rgba(18, 18, 18, 0.1);
+
+    &__container {
+        align-items: center;
+        position: relative;
+        
+        &_1 {
+            padding: 18px 30px 12px 30px;
+        }
+
+        &_2 {
+            padding: 0 30px 18px 30px;
+        }
+    }
+
+    &__items {
+        margin: 0 0 12px 0;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 0;
+
+        &:not(:last-child)
+        {
+            margin: 0 0 4px 0;
+        }
+
+        &:active,
+        &:hover{
+            cursor: pointer;
+            background-color: #e6e6e6;
+        }
+
+        &_1 {
+        }
+
+        &_2 {
+        }
+    }
+
+    &__image {
+    }
+
+    &__block-text {
+        margin: 0 0 0 14px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+    }
+
+    &__text {
+        
+    }
+
+    &__button {
+        padding: 8px 37px;
+        font-size: 12px;
+        background-color: $AdditionColor;
+        color: $PrimaryColor;
+
+        &:hover {
+            background-color: #f9fbff;
+        }
+    }
+}
