@@ -773,7 +773,7 @@ body._lock {
   position: absolute;
   z-index: 5;
   bottom: 0;
-  right: 240px;
+  right: -40px;
 }
 
 .block {
