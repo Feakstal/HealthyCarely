@@ -46,7 +46,7 @@
     }
 }
 
-@media (max-width: 1268px) {
+@media (max-width: 1270px) {
     .medical-care {
 
         &::before {
@@ -97,12 +97,10 @@
         }
 
         &__button {
-            flex: 0 0 122px;
             padding: 16px 36px;
         }
 
         &__profile {
-            position: absolute;
             width: 144px;
             left: 100px;
             bottom: 60px;
@@ -131,7 +129,6 @@
 /* ----------------------------- */
 
 .about {
-
     &__title {
         font-weight: 700;
         font-size: 54px;
@@ -159,9 +156,8 @@
     }
 }
 
-@media (max-width: 1268px) {
+@media (max-width: 1270px) {
     .about {
-
         &__title {
             font-size: 44px;
     
@@ -363,7 +359,7 @@
     }
 }
 
-@media (max-width: 1268px) {
+@media (max-width: 1270px) {
     .fast-solutions {
         &__items {
             gap: 15px;
@@ -452,7 +448,7 @@
     }
 }
 
-@media (max-width: 1268px) {
+@media (max-width: 1270px) {
     .item-fast-solutions {
         &__icon {
             padding: 30px 0 0 20px;
@@ -504,9 +500,9 @@
     overflow-x: hidden;
 
     &__container {
-        position: relative;
-        display: flex;
         padding: 80px 15px 208px 15px;
+        display: flex;
+        position: relative;
     }
 
     &::before {
@@ -522,7 +518,7 @@
     }
 
     &__block {
-        
+        max-width: 535px;
     }
 
     &__block-text {
@@ -544,9 +540,89 @@
     }
 }
 
-.block {
-    max-width: 535px;
+@media (max-width: 1270px) {
+    .find-doctor {
 
+        &::before {
+            top: 46%;
+            left: 47%;
+        }
+
+        &__available-card {
+            top: 60%;
+            right: 50%;
+        }
+    }
+}
+
+@media (max-width: 991.98px) {
+    .find-doctor {
+
+        &::before {
+            top: 57%;
+            left: 35%;
+        }
+
+        &__available-card {
+            top: 60%;
+            right: 40%;
+        }
+    
+        &__image {
+            bottom: 0;
+            right: -200px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .find-doctor {
+
+        &__container {
+            flex-direction: column;
+            padding: 30px 15px 0 15px;
+        }
+
+        &::before {
+            top: 57%;
+            left: 25%;
+        }
+
+        &__block {
+            max-width: none;
+        }
+
+        &__available-card {
+            top: 64%;
+            right: 57%;
+        }
+    
+        &__image {
+            bottom: 0;
+            right: -250px;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+    .find-doctor {
+
+        &::before {
+            display: none;
+        }
+        
+        &__container {
+            padding: 124px 15px 40px 15px;
+        }
+
+        &__available-card {
+            position: static;
+            margin: 70px auto 0px;
+        }  
+    }
+}
+
+.block {
     &__text {
         font-size: 14px;
         line-height: 20px;
@@ -593,6 +669,15 @@
         padding: 16px 36px;
     }
 }
+
+@media (max-width: 767.98px) {
+    .button {
+        &__see-the-doctors {
+            padding: 12px 18px;
+        }
+    }
+}
+
 
 /* ----------------------------- */
 
@@ -667,3 +752,39 @@
         }
     }
 }
+
+.doctor-image_2 {
+    img {
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+
+    .doctor-image_2 {
+        img {
+            max-width: 65%;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+
+    .doctor-image_2 {
+        position: relative;
+        right: -255px;
+        bottom: 0;
+        img {
+            max-width: 50%;
+        }
+    }
+}
+
+@media (max-width: 479.98px) {
+
+    .doctor-image_2 {
+        display: none;
+    }
+}
+

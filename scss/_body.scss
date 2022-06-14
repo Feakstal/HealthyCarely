@@ -1,3 +1,8 @@
+html,body{
+    height: 100%;
+    line-height: 1;
+}
+
 body {
     font-family: Manrope;
     font-size: 14px;
@@ -17,13 +22,13 @@ body {
 }
 
 [class*="__container"] {
-    max-width: 1268px;
+    max-width: 1270px;
     margin: 0px auto;
     padding: 0px 15px;
 }
 
 /* PC */
-@media (max-width: 1268px) {
+@media (max-width: 1270px) {
     [class*="__container"] {
         max-width: 970px;
     }
