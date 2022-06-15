@@ -126,8 +126,6 @@
     }
 }
 
-/* ----------------------------- */
-
 .about {
     &__title {
         font-weight: 700;
@@ -203,8 +201,6 @@
         }
     }
 } 
-
-/* ----------------------------- */
 
 .card {
     background-color: $BackgroundColor;
@@ -282,8 +278,6 @@
     }
 }
 
-/* ----------------------------- */
-
 .button {
     @include button;
 
@@ -301,8 +295,6 @@
         }
     }
 }
-
-/* ----------------------------- */
 
 .doctor-image_1 {
     img {
@@ -342,7 +334,6 @@
         display: flex;
         flex-direction: row;
         gap: 30px;
-        
     }
 
     &__column {
@@ -396,9 +387,8 @@
     }
 }
 
-/* ----------------------------- */
-
 .block-text {
+    margin: 0 0 26px 0;
     &__title {
         font-weight: 700;
         font-size: 14px;
@@ -416,8 +406,6 @@
         color: $TitleColor;
     }
 }
-
-/* ----------------------------- */
 
 .item-fast-solutions {
     &__icon {
@@ -522,7 +510,6 @@
     }
 
     &__block-text {
-        margin: 0 0 26px 0;
     }
 
     &__available-card {
@@ -678,7 +665,6 @@
     }
 }
 
-
 /* ----------------------------- */
 
 .available-card {
@@ -738,7 +724,6 @@
     }
 
     &__text {
-        
     }
 
     &__button {
@@ -759,9 +744,7 @@
     }
 }
 
-
 @media (max-width: 991.98px) {
-
     .doctor-image_2 {
         img {
             max-width: 65%;
@@ -770,7 +753,6 @@
 }
 
 @media (max-width: 767.98px) {
-
     .doctor-image_2 {
         position: relative;
         right: -255px;
@@ -782,9 +764,135 @@
 }
 
 @media (max-width: 479.98px) {
-
     .doctor-image_2 {
         display: none;
     }
 }
 
+/* ----------------------------- */
+
+.make-schedule {
+    position: relative;
+
+    &__container {
+        padding: 150px 15px 75px 15px;
+        display: flex;
+        position: relative;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 5;
+        flex: 0 1 55%;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            border: $PrimaryColor solid 2px;
+            background: transparent;
+            width: 611px;
+            height: 375px;
+            top: -2.5%;
+            left: 1.35%;
+            border-radius: 1000px;
+        }
+    
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            border: $PrimaryColor solid 2px;
+            background: transparent;
+            width: 611px;
+            height: 375px;
+            top: 5%;
+            left: -1.15%;
+            border-radius: 1000px;
+        }
+    }
+
+    &__block {
+        flex: 0 1 45%;
+        padding: 0 20px;
+        max-width: 515px;
+    }
+
+    &__block-text {
+    }
+}
+
+.reception-image {
+    img {
+        border-radius: 1000px;
+    }
+}
+
+.button {
+    &__make-schedule-now {
+        padding: 16px 36px;
+    }
+}
+
+/* ----------------------------- */
+
+.our-rating {
+    &__container {
+        padding: 75px 15px 75px 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block-text {
+        margin: 0px auto 53px;
+        text-align: center;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+    &__column {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        padding: 50px 0 44px;
+        background: $BackgroundColor;
+        box-shadow: 0px 10px 40px rgba(18, 18, 18, 0.1);
+        border-radius: 0px 0px 10px 10px;
+        border-top: $PrimaryColor solid 3px;
+        flex: 0 0 287px;
+    }
+    
+    &__item {
+    }
+}
+
+.item-our-rating {
+    &__number {
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: $ls003em;
+        color: $TitleColor;
+        margin: 0 0 12px 0;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: $ls003em;
+        color: $TitleColor;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+        letter-spacing: $TextColor;
+        color: #696969;
+    }
+}
