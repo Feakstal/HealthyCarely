@@ -1076,3 +1076,132 @@ body._lock {
   letter-spacing: #696969;
   color: #696969;
 }
+
+/* ----------------------------- */
+.feedback {
+  position: relative;
+}
+
+.feedback__container {
+  padding: 75px 15px 250px 29px;
+}
+
+.feedback__block-text {
+  justify-content: center;
+  text-align: center;
+  margin: 0 0 54px 0;
+}
+
+.feedback__subtitle {
+  margin: 0 0 11px 0;
+}
+
+.feedback__text {
+  letter-spacing: 0.24px;
+}
+
+.feedback__review {
+  display: flex;
+}
+
+.feedback__image {
+  position: relative;
+  z-index: 5;
+  flex: 0 1 49%;
+  bottom: -80px;
+  left: -14px;
+}
+
+.feedback__image::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: transparent;
+  width: 420px;
+  height: 360px;
+  border: #4D77FF solid 2px;
+  top: 12px;
+  left: 11px;
+}
+
+.feedback__review-content {
+  flex: 0 1 51%;
+}
+
+.feedback__review-content::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #EDF1FF;
+  width: 100vw;
+  height: 350px;
+  left: -114px;
+  top: -156px;
+  transform: translate(0%, 100%);
+}
+
+.feedback__review-text {
+  overflow-y: hidden;
+  position: relative;
+  max-width: 555px;
+  padding: 100px 0 90px 0;
+  margin: 0 0 44px 0;
+}
+
+.feedback__bottom-block {
+  display: flex;
+}
+
+.bottom-block {
+  justify-content: space-between;
+}
+
+.bottom-block__client-block {
+  max-width: 210px;
+}
+
+.bottom-block__client-block div:not(:last-child) {
+  margin: 0 0 14px 0;
+}
+
+.bottom-block__switch-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.client-image img {
+  max-width: 100%;
+}
+
+.review-text {
+  font-size: 25px;
+  line-height: 40px;
+  letter-spacing: 0.48px;
+  color: #121212;
+}
+
+.client-block__name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0.48px;
+  color: #121212;
+}
+
+.client-block__post {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0.48px;
+  color: #696969;
+}
+
+.switch_left {
+  transform: rotate(180deg);
+  fill: red;
+}
+
+.switch_right {
+  fill: red;
+}

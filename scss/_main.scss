@@ -896,3 +896,158 @@
         color: #696969;
     }
 }
+
+/* ----------------------------- */
+
+.feedback {
+    position: relative;
+
+    &__container {
+        padding: 75px 15px 250px 29px;
+    }
+
+    &__block-text {
+        justify-content: center;
+        text-align: center;
+        margin: 0 0 54px 0;
+    }
+
+    &__subtitle {
+        margin: 0 0 11px 0;
+    }
+
+    &__text {
+        letter-spacing: $ls0015em;
+    }
+
+    &__review {
+        display: flex;
+    }
+
+    &__image {
+        position: relative;
+        z-index: 5;
+        flex: 0 1 49%;
+        bottom: -80px;
+        left: -14px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: transparent;
+            width: 420px;
+            height: 360px;
+            border: $PrimaryColor solid 2px;
+            top: 12px;
+            left: 11px;
+
+        }
+    }
+
+    &__review-content {
+        flex: 0 1 51%;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: $AdditionColor;
+            width: 100vw;
+            height: 350px;
+            left: -114px;
+            top: -156px;
+            transform: translate(0%, 100%);
+        }
+    }
+
+    &__review-text {
+        overflow-y: hidden;
+        position: relative;
+        max-width: 555px;
+        padding: 100px 0 90px 0;
+        margin: 0 0 44px 0;
+    }
+
+    &__bottom-block {
+        display: flex;
+    }
+}
+
+.bottom-block {
+    justify-content: space-between;
+
+    &__client-block {
+        max-width: 210px;
+
+        & div:not(:last-child) {
+            margin: 0 0 14px 0;
+        }
+    }
+
+    &__switch-block {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+}
+
+.client-image {
+    img {
+        max-width: 100%;
+    }
+}
+
+.review-text {
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: $ls003em;
+    color: $TitleColor;
+}
+
+.feedback {
+    &__client {
+    }
+    &__switch-block {
+    }
+}
+.client-block {
+    &__name {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 20px;
+        letter-spacing: $ls003em;
+        color: $TitleColor;
+    }
+
+    &__post {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 14px;
+        letter-spacing: $ls003em;
+        color: $TextColor;
+    }
+}
+
+.switch-block {
+    &__switch {
+    }
+}
+
+.switch {
+    &_left {
+        transform: rotate(180deg);
+        fill: red;
+
+        &__link {
+        }
+    }
+
+    &_right {
+        fill: red;
+
+        &__link {
+            
+        }
+    }
+}
+
