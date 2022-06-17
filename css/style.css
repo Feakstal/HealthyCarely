@@ -280,6 +280,7 @@ body._lock {
   letter-spacing: 0.48px;
   color: #FFFFFF;
   transition: background-color 0.3s ease 0s;
+  cursor: pointer;
   font-weight: 500;
 }
 
@@ -563,6 +564,7 @@ body._lock {
   letter-spacing: 0.48px;
   color: #FFFFFF;
   transition: background-color 0.3s ease 0s;
+  cursor: pointer;
 }
 
 .button:hover {

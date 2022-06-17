@@ -1,5 +1,4 @@
 @mixin button {
-    
     display: inline-block;
     background-color: $PrimaryColor;
     border-radius: $BorderRadius;
@@ -7,6 +6,7 @@
     letter-spacing: $ls003em;
     color: $BackgroundColor;
     transition: background-color 0.3s ease 0s;
+    cursor: pointer;
 
     &:hover {
         background-color: #7996f7;
