@@ -1286,6 +1286,10 @@ body._lock {
   margin: 0 0 10px 0;
 }
 
+.menu-footer__item:hover {
+  text-decoration: underline;
+}
+
 .menu-footer__link {
   line-height: 20px;
   letter-spacing: 0.24px;
