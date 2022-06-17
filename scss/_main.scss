@@ -903,7 +903,7 @@
     position: relative;
 
     &__container {
-        padding: 75px 15px 250px 29px;
+        padding: 75px 15px 246px 15px;
     }
 
     &__block-text {
@@ -940,7 +940,7 @@
             height: 360px;
             border: $PrimaryColor solid 2px;
             top: 12px;
-            left: 11px;
+            left: 14px;
 
         }
     }
@@ -1010,6 +1010,7 @@
     &__switch-block {
     }
 }
+
 .client-block {
     &__name {
         font-weight: 700;
@@ -1029,25 +1030,23 @@
 }
 
 .switch-block {
+    gap: 16px;
+
     &__switch {
     }
 }
 
-.switch {
-    &_left {
-        transform: rotate(180deg);
-        fill: red;
+.switch__link {
 
-        &__link {
+    &_left {
+        img {
+            transform: rotate(180deg);
+            fill: $AdditionColor;
         }
     }
 
     &_right {
-        fill: red;
 
-        &__link {
-            
-        }
     }
 }
 

@@ -1,0 +1,100 @@
+.footer {
+    width: 100%;
+    bottom: 0;
+    left: 0;
+
+    &__container {
+        display: flex;
+        min-height: 125px;
+        padding: 0 15px 104px 15px;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 42%;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: flex-end;
+        flex: 0 1 58%;
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+
+        &_1 {
+            padding: 0 35px 0 0;
+        }
+
+        &_2 {
+            padding: 0 35px;
+        }
+
+        &_3 {
+            padding: 0 35px;
+        }
+
+        &_4 {
+            padding: 0 0 0 35px;
+        }   
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: $ls003em;
+        color: $TitleColor;
+        margin: 0 0 16px 0;
+    }
+}
+
+.footer-description {
+    &__logo {
+        & p {
+            margin: 0 0 12px 0;
+        }
+    }
+
+    &__text {
+        max-width: 432px;
+        line-height: 20px;
+        letter-spacing: $ls0015em;
+        color: $TitleColor;
+    }
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: $ls003em;
+}
+
+.menu-footer {
+    &__list {
+        white-space: nowrap;
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin: 0 0 10px 0;
+        }
+    }
+
+    &__link {
+        line-height: 20px;
+        letter-spacing: $ls0015em;
+        color: $TitleColor;
+    }
+}
+
+.media-list {
+    display: flex;
+    gap: 10px;
+}
+
+
