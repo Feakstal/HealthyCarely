@@ -1,6 +1,11 @@
-/* --------------- COLORS ---------------- */
-/* --------------- TEXT ---------------- */
-/* --------------- BUTTON ---------------- */
+/* @import "abstracts/buttons";
+@import "abstracts/colors";
+@import "abstracts/fonts";
+@import "abstracts/text";
+@import "mixins/mixin"; */
+/* @use "clear-style";
+@use "abstracts";
+@use "mixins/mixin"; */
 @import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700display=swap);
 * {
   padding: 0;
@@ -63,6 +68,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: inherit;
 }
 
+@use "../abstracts/abstracts" as *;
 html, body {
   height: 100%;
   line-height: 1;
@@ -115,6 +121,8 @@ body._lock {
 }
 
 /* MOBILE SMALL */
+@use "../abstracts" as *;
+@use "../mixins/mixin" as *;
 .header {
   position: absolute;
   width: 100%;
@@ -326,6 +334,8 @@ body._lock {
   }
 }
 
+@use "../abstracts" as *;
+@use "../mixins/mixin" as *;
 .main {
   flex: 1 1 auto;
 }
@@ -653,7 +663,7 @@ body._lock {
 
 @media (max-width: 479.98px) {
   .fast-solutions__container {
-    padding: 30px 15px 50px 15px;
+    padding: 30px 15px 40px 15px;
   }
 }
 
@@ -832,7 +842,7 @@ body._lock {
     display: none;
   }
   .find-doctor__container {
-    padding: 124px 15px 40px 15px;
+    padding: 30px 15px 40px 15px;
   }
   .find-doctor__available-card {
     position: static;
@@ -918,7 +928,7 @@ body._lock {
   margin: 0 0 4px 0;
 }
 
-.available-card__item:active, .available-card__item:hover {
+.available-card__item:target, .available-card__item:hover {
   cursor: pointer;
   background-color: #e6e6e6;
 }
@@ -1016,6 +1026,29 @@ body._lock {
   max-width: 515px;
 }
 
+@media (max-width: 1270px) {
+  .make-schedule__image {
+    flex: 0 1 55%;
+  }
+  .make-schedule__image::before {
+    width: 611px;
+    height: 375px;
+    top: -2.5%;
+    left: 1.35%;
+  }
+  .make-schedule__image::after {
+    width: 611px;
+    height: 375px;
+    top: 5%;
+    left: -1.15%;
+  }
+  .make-schedule__block {
+    flex: 0 1 45%;
+    padding: 0 20px;
+    max-width: 515px;
+  }
+}
+
 .reception-image img {
   border-radius: 1000px;
 }
@@ -1075,7 +1108,7 @@ body._lock {
   font-size: 12px;
   line-height: 16px;
   text-align: center;
-  letter-spacing: #696969;
+  letter-spacing: 0.48px;
   color: #696969;
 }
 
@@ -1130,18 +1163,6 @@ body._lock {
   flex: 0 1 51%;
 }
 
-.feedback__review-content::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  background-color: #EDF1FF;
-  width: 100vw;
-  height: 350px;
-  left: -114px;
-  top: -156px;
-  transform: translate(0%, 100%);
-}
-
 .feedback__review-text {
   overflow-y: hidden;
   position: relative;
@@ -1152,6 +1173,18 @@ body._lock {
 
 .feedback__bottom-block {
   display: flex;
+  position: relative;
+}
+
+.feedback__bottom-block::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background-color: #EDF1FF;
+  width: 100vw;
+  height: 350px;
+  right: 0px;
+  top: -400px;
 }
 
 .bottom-block {
@@ -1208,6 +1241,7 @@ body._lock {
   fill: #EDF1FF;
 }
 
+@use "../abstracts" as *;
 .footer {
   width: 100%;
   bottom: 0;

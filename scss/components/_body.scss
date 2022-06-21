@@ -1,12 +1,14 @@
+@use "../abstracts/abstracts" as *;
+
 html,body{
     height: 100%;
     line-height: 1;
 }
 
 body {
-    font-family: Manrope;
-    font-size: 14px;
-    font-weight: 400;
+    font-family: $Manrope;
+    font-size: $DefFontSize;
+    font-weight: $DefFontWeight;
     max-width: 100%;
     color: $TextColor;
     &._lock {

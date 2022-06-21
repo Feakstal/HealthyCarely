@@ -1,3 +1,6 @@
+@use "../abstracts" as *;
+@use "../mixins/mixin" as *;
+
 .main {
     flex: 1 1 auto;
 }
@@ -382,7 +385,7 @@
 @media (max-width: 479.98px) {
     .fast-solutions {
         &__container {
-            padding: 30px 15px 50px 15px;
+            padding: 30px 15px 40px 15px;
         }
     }
 }
@@ -599,7 +602,7 @@
         }
         
         &__container {
-            padding: 124px 15px 40px 15px;
+            padding: 30px 15px 40px 15px;
         }
 
         &__available-card {
@@ -698,7 +701,7 @@
             margin: 0 0 4px 0;
         }
 
-        &:active,
+        &:target,
         &:hover{
             cursor: pointer;
             background-color: #e6e6e6;
@@ -822,6 +825,34 @@
     }
 }
 
+@media (max-width: 1270px) {
+    .make-schedule { 
+        &__image {
+            flex: 0 1 55%;
+    
+            &::before {
+                width: 611px;
+                height: 375px;
+                top: -2.5%;
+                left: 1.35%;
+            }
+        
+            &::after {
+                width: 611px;
+                height: 375px;
+                top: 5%;
+                left: -1.15%;
+            }
+        }
+    
+        &__block {
+            flex: 0 1 45%;
+            padding: 0 20px;
+            max-width: 515px;
+        }
+    }
+}
+
 .reception-image {
     img {
         border-radius: 1000px;
@@ -892,8 +923,8 @@
         font-size: 12px;
         line-height: 16px;
         text-align: center;
-        letter-spacing: $TextColor;
-        color: #696969;
+        letter-spacing: $ls003em;
+        color: $TextColor;
     }
 }
 
@@ -941,23 +972,11 @@
             border: $PrimaryColor solid 2px;
             top: 12px;
             left: 14px;
-
         }
     }
 
     &__review-content {
         flex: 0 1 51%;
-        &::before {
-            content: "";
-            position: absolute;
-            z-index: -1;
-            background-color: $AdditionColor;
-            width: 100vw;
-            height: 350px;
-            left: -114px;
-            top: -156px;
-            transform: translate(0%, 100%);
-        }
     }
 
     &__review-text {
@@ -970,6 +989,17 @@
 
     &__bottom-block {
         display: flex;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-color: $AdditionColor;
+            width: 100vw;
+            height: 350px;
+            right: 0px;
+            top: -400px;
+        }
     }
 }
 

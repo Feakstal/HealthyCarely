@@ -1,3 +1,6 @@
+@use "../abstracts" as *;
+@use "../mixins/mixin" as *;
+
 .header {
     position: absolute;
     width: 100%;

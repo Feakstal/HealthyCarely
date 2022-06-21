@@ -1,8 +1,18 @@
-@import "_variables";
-@import "_clear-style";
-@import "_body";
-@import "_mixin";
-@import "_header";
-@import "_main";
-@import "_footer";
-@import url(https://fonts.googleapis.com/css?family=Manrope:regular,500,600,700display=swap);
+/* @import "abstracts/buttons";
+@import "abstracts/colors";
+@import "abstracts/fonts";
+@import "abstracts/text";
+@import "mixins/mixin"; */
+/* @use "clear-style";
+@use "abstracts";
+@use "mixins/mixin"; */
+@import "clear-style";
+@import "abstracts/buttons";
+@import "abstracts/colors";
+@import "abstracts/fonts";
+@import "abstracts/text";
+@import "mixins/mixin";
+@import "components/body";
+@import "components/header";
+@import "components/main";
+@import "components/footer";
