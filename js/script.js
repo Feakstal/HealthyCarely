@@ -35,10 +35,10 @@ if (isMobile.any()) {
 
 /* Menu Burger */
 
-const iconMenu = document.querySelector(".menu__icon");
+const iconMenu = document.querySelector(".menu-header__icon");
 
 if (iconMenu) {
-    const menuBody = document.querySelector(".menu__body");
+    const menuBody = document.querySelector(".menu-header__body");
     iconMenu.addEventListener("click", function (e) {
         document.body.classList.toggle('_lock');
         iconMenu.classList.toggle("_active");
