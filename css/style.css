@@ -503,6 +503,9 @@ body._lock {
   .about__title {
     font-size: 36px;
   }
+  .about__text {
+    font-size: 16px;
+  }
 }
 
 .card {
@@ -746,6 +749,15 @@ body._lock {
   }
 }
 
+@media (max-width: 767.98px) {
+  .item-fast-solutions__title {
+    font-size: 16px;
+  }
+  .item-fast-solutions__text {
+    font-size: 14px;
+  }
+}
+
 /* ----------------------------- */
 .find-doctor {
   position: relative;
@@ -831,7 +843,7 @@ body._lock {
     max-width: none;
   }
   .find-doctor__available-card {
-    top: 64%;
+    top: 60%;
     right: 57%;
   }
   .find-doctor__image {
@@ -840,7 +852,7 @@ body._lock {
   }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 555px) {
   .find-doctor::before {
     display: none;
   }
@@ -869,6 +881,12 @@ body._lock {
   margin: 0 0 16px 0;
 }
 
+@media (max-width: 767.98px) {
+  .block__text {
+    font-size: 16px;
+  }
+}
+
 .list__item {
   font-weight: 600;
   font-size: 14px;
@@ -886,6 +904,12 @@ body._lock {
   height: 24px;
   top: -2px;
   left: -36px;
+}
+
+@media (max-width: 767.98px) {
+  .list__item {
+    font-size: 16px;
+  }
 }
 
 .button__see-the-doctors {
@@ -974,7 +998,7 @@ body._lock {
   }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 555px) {
   .doctor-image_2 {
     display: none;
   }
@@ -1060,6 +1084,7 @@ body._lock {
     flex-direction: column-reverse;
   }
   .make-schedule__block {
+    padding: 0;
     margin: 0 0 40px 0;
   }
 }
@@ -1170,6 +1195,18 @@ body._lock {
   text-align: center;
   letter-spacing: 0.48px;
   color: #696969;
+}
+
+@media (max-width: 767.98px) {
+  .item-our-rating__number {
+    font-size: 28px;
+  }
+  .item-our-rating__title {
+    font-size: 16px;
+  }
+  .item-our-rating__text {
+    font-size: 14px;
+  }
 }
 
 /* ----------------------------- */
@@ -1453,6 +1490,27 @@ body._lock {
   }
 }
 
+@media (max-width: 479.98px) {
+  .footer__container {
+    flex-direction: column;
+    padding: 0 15px 70px 15px;
+  }
+  .footer__row {
+    flex: 0 1 100%;
+    align-self: center;
+  }
+  .footer__description {
+    flex: 0 1 100%;
+    align-self: center;
+  }
+  .footer__column {
+    flex: 0 1 100%;
+  }
+  .footer__column_3 {
+    margin: 0 0 20px 0;
+  }
+}
+
 .footer-description__logo p {
   margin: 0 0 12px 0;
 }
@@ -1477,9 +1535,18 @@ body._lock {
 }
 
 @media (max-width: 767.98px) {
+  .footer-description {
+    padding: 0 35px 0 0;
+  }
   .footer-description__text {
     font-size: 16px;
     max-width: 432px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .footer-description {
+    padding: 0 60px 0 0;
   }
 }
 
@@ -1495,7 +1562,7 @@ body._lock {
 }
 
 .menu-footer__item:not(:last-child) {
-  margin: 0 0 15px 0;
+  margin: 0 0 10px 0;
 }
 
 .menu-footer__link {
@@ -1509,8 +1576,17 @@ body._lock {
 }
 
 @media (max-width: 767.98px) {
+  .menu-footer__item:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
   .menu-footer__link {
-    /*             font-size: 16px; */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 479.98px) {
+  .menu-footer__link {
+    font-size: 20px;
   }
 }
 

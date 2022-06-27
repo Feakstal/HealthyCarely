@@ -202,6 +202,10 @@
         &__title {
             font-size: 36px;
         }
+
+        &__text {
+            font-size: 16px;
+        }
     }
 } 
 
@@ -483,6 +487,18 @@
     }
 }
 
+@media (max-width: 767.98px) {
+    .item-fast-solutions {
+        &__title {
+            font-size: 16px;
+        }
+    
+        &__text {
+            font-size: 14px;
+        }
+    }
+}
+
 /* ----------------------------- */
 
 .find-doctor {
@@ -584,7 +600,7 @@
         }
 
         &__available-card {
-            top: 64%;
+            top: 60%;
             right: 57%;
         }
     
@@ -595,7 +611,7 @@
     }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 555px) {
     .find-doctor {
 
         &::before {
@@ -633,6 +649,14 @@
     }
 }
 
+@media (max-width: 767.98px) {
+    .block {
+        &__text {
+            font-size: 16px;
+        }
+    }
+}
+
 .list {
     &__item {
         font-weight: 600;
@@ -651,6 +675,14 @@
             height: 24px;
             top: -2px;
             left: -36px;
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .list {
+        &__item {
+            font-size: 16px;
         }
     }
 }
@@ -767,7 +799,7 @@
     }
 }
 
-@media (max-width: 479.98px) {
+@media (max-width: 555px) {
     .doctor-image_2 {
         display: none;
     }
@@ -871,6 +903,7 @@
         }
 
         &__block {
+            padding: 0;
             margin: 0 0 40px 0;
         }
     }
@@ -1009,6 +1042,22 @@
         text-align: center;
         letter-spacing: $ls003em;
         color: $TextColor;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .item-our-rating {
+        &__number {
+            font-size: 28px;
+        }
+    
+        &__title {
+            font-size: 16px;
+        }
+    
+        &__text {
+            font-size: 14px;
+        }
     }
 }
 
