@@ -1,12 +1,12 @@
 *{padding: 0; margin: 0; border: 0;}
 *,*:before, *:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
 :focus,:active{outline: none;}
-a:focus,:active{outline: none;  -webkit-tap-highlight-color: transparent;}
+a:focus,:active{outline: none;-webkit-tap-highlight-color: transparent;}
 nav,footer,header,aside{display: block;}
 html,body{height: 100%;line-height: 1;}
 input,button,textarea{font-family: inherit;}
 input::-ms-clear{display: none;}
-button{cursor: pointer;}
+button{cursor: pointer;border: none;background-color: transparent;}
 a, a:visited{text-decoration:none;}
 a:hover{text-decoration: none;}
 ol, ul, li{list-style: none;}
