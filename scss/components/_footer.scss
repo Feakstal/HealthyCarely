@@ -1,4 +1,7 @@
-@use "../abstracts" as *;
+@import "../abstracts/buttons";
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
+@import "../abstracts/text";
 
 .footer {
     width: 100%;
@@ -181,6 +184,7 @@
 }
 
 .menu-footer {
+    position: relative;
     &__list {
         white-space: nowrap;
     }

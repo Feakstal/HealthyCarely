@@ -1,5 +1,8 @@
-@use "../abstracts" as *;
-@use "../mixins/mixin" as *;
+@import "../abstracts/buttons";
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
+@import "../abstracts/text";
+@import "../mixins/mixin";
 
 .header {
     position: absolute;

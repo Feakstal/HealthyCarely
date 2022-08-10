@@ -1,4 +1,7 @@
-@use "../abstracts/abstracts" as *;
+@import "../abstracts/buttons";
+@import "../abstracts/colors";
+@import "../abstracts/fonts";
+@import "../abstracts/text";
 
 html,body{
     height: 100%;
