@@ -1,4 +1,4 @@
-# The demonstation of current progress
+# The result of the project
 
 ![](img/proj-demo/HealthCarely-image.png)
 
