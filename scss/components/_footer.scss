@@ -196,12 +196,28 @@
     }
 
     &__link {
+        position: relative;
         line-height: 20px;
         letter-spacing: $ls0015em;
         color: $TitleColor;
 
-        &:not(&_media):hover {
-            text-decoration: underline;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1.25px;
+            border-radius: 4px;
+            background-color: $TitleColor;
+            bottom: 0;
+            left: 0;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .2s ease-in;
+        }
+
+        &:not(&_media):hover::before {
+            transform-origin: left;
+            transform: scaleX(1);
         }
     }
 }
